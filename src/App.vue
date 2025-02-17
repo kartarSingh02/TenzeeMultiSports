@@ -26,15 +26,13 @@ import Navbar from "@/components/home/Navbar.vue";
 }
 
 html, body {
-  min-height: 100vh;
-  background-color: #000000 !important;
+  background-color: rgba(33, 37, 41, 1) !important;
   color: var(--text-light);
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Hide scrollbar but keep functionality */
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -45,12 +43,10 @@ body::-webkit-scrollbar {
 }
 
 #app {
-  min-height: 100vh;
 }
 
 section {
   overflow: hidden;
-  min-height: 100vh;
   width: 100%;
 }
 

@@ -1,55 +1,29 @@
 <template>
-  <div class="overview_container">
-    <div class="team-photo">
-      <img src="/src/assets/images/team.jpg" alt="team"/>
-    </div>
-    <div class="overview_team_content">
-      <h1 class="team-title">Our Team</h1>
-      <p class="team-description">some description is here lorem ipsum dsas sd asda da</p>
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <div class="position-relative" style="min-height: 100vh;">
+          <img
+              src="/src/assets/images/team.jpg"
+              alt="team"
+              class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 px-4"
+          />
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="text-white">
+          <h1 class="display-5 fw-semibold mb-3">Our Team</h1>
+          <p class="text-secondary fs-6">
+            some description is here lorem ipsum dsas sd asda da asjdf askfsh kfasdh fhadsk fasdk fhsdkh fksdhkfasdf
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-
 </script>
 
-<style scoped>
-.overview_container{
-  margin-top: 30px ;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.overview_team_content{
-  margin-left: 2rem;
-  justify-items: center;
-  color: white;
-}
-.team-photo {
-  min-height: 100vh;
-  width: 60%;
-  position: relative;
-}
-
-.team-title{
-  font-size: 36px;
-  font-weight: 600;
-}
-
-.team-description{
-  font-size: 16px;
-}
-
-
-.team-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-</style>
+<!-- No custom CSS needed as we're using Bootstrap classes -->

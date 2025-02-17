@@ -1,53 +1,64 @@
 <template>
-  <div class="slider-container">
-    <section class="relative h-screen">
-      <div class="card bg-dark text-white mx-auto" style="max-width: 100%;">
-        <!-- Sliding Background Images -->
-        <transition-group
-            name="slide"
-            tag="div"
-            class="relative h-screen"
-            style="overflow: hidden;"
-        >
+  <div class="carousel-container">
+    <section class="position-relative vh-100">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner h-100">
           <div
               v-for="(slide, index) in slides"
               :key="slide.id"
-              v-show="currentSlide === index"
-              class="absolute inset-0 w-full h-full"
-              style="transform-origin: center center;"
+              class="carousel-item h-100"
+              :class="{ active: index === 0 }"
+              :data-bs-interval="5000"
           >
             <img
                 :src="slide.image"
                 :alt="slide.alt"
-                class="card-img w-full h-full object-cover object-center"
+                class="d-block w-100 h-100 object-fit-cover"
                 loading="lazy"
             >
-          </div>
-        </transition-group>
-
-        <div class="card-img-overlay" style="background-color: rgba(0, 0, 0, 0.5)">
-          <div class="max-w-3xl mt-60">
-            <h1 class="card-title text-5xl md:text-7xl font-bold leading-tight animate-slideIn">
-              STRONG, FIT
-              <br />
-              UNSTOPPABLE.
-            </h1>
-            <p class="card-text animate-fadeInUp">
-              Transform your body, elevate your mind, and push beyond your limits.
-              <br>
-              Join us on a journey to becoming the strongest version of yourself.
-            </p>
+            <div class="carousel-caption d-flex align-items-center h-100">
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 col-md-8 col-lg-6">
+                    <div class="text-start">
+                      <h1 class="display-3 fw-bold text-uppercase animate-slideIn">
+                        Strong, Fit
+                        <br>
+                        Unstoppable.
+                      </h1>
+                      <p class="lead animate-fadeInUp">
+                        Transform your body, elevate your mind, and push beyond your limits.
+                        <br>
+                        Join us on a journey to becoming the strongest version of yourself.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </section>
-    <TeamPhoto class="relative z-10" />
+    <TeamPhoto class="position-relative z-1" />
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
-import TeamPhoto from "@/components/home/TeamPhoto.vue";
+import { onMounted } from 'vue'
+import TeamPhoto from "@/components/home/TeamPhoto.vue"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap'
 
 const slides = [
   {
@@ -67,76 +78,23 @@ const slides = [
   }
 ]
 
-const currentSlide = ref(0)
-let intervalId = null
-
-const setSlide = (index) => {
-  currentSlide.value = index
-  resetInterval()
-}
-
-const nextSlide = () => {
-  currentSlide.value = (currentSlide.value + 1) % slides.length
-}
-
-const resetInterval = () => {
-  if (intervalId) clearInterval(intervalId)
-  startSlideshow()
-}
-
-const startSlideshow = () => {
-  intervalId = setInterval(nextSlide, 5000)
-}
-
 onMounted(() => {
-  startSlideshow()
-})
-
-onBeforeUnmount(() => {
-  if (intervalId) clearInterval(intervalId)
+  // Bootstrap's carousel will handle the automatic sliding
 })
 </script>
 
 <style scoped>
-.slider-container {
-  position: relative;
+.carousel-item {
+  transition: transform 1.2s ease-in-out;
 }
 
-.slide-enter-active,
-.slide-leave-active {
-  position: absolute;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
-  height: 100%;
-}
-
-.slide-enter-from {
-  transform: translateX(100%);
-}
-
-.slide-leave-to {
-  transform: translateX(-100%);
-}
-
-.card {
-  position: relative;
-  height: 100%;
-}
-
-.card-img {
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  object-fit: cover;
-}
-
-.card-img-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
   right: 0;
   bottom: 0;
-  padding: 2rem;
+  left: 0;
+  padding-bottom: 0;
+  text-align: left;
 }
 
 @keyframes slideIn {
@@ -162,35 +120,21 @@ onBeforeUnmount(() => {
 }
 
 .animate-slideIn {
-  animation: slideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 .animate-fadeInUp {
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: fadeInUp 0.3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   animation-delay: 0.3s;
   opacity: 0;
 }
 
-.card-title{
-  margin-top:40%;
-  font-size: 60px;
-  font-weight: bold;
-}
-
-.card-text{
-  font-size: 16px
-}
-
 @media (max-width: 768px) {
-  .card-img-overlay {
-    padding: 1rem;
-  }
-
-  h1 {
+  .display-3 {
     font-size: 2.5rem;
   }
 
-  p {
+  .lead {
     font-size: 1.125rem;
   }
 }

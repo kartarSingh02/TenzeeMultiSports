@@ -1,9 +1,8 @@
 <template>
-  <div class="home">
-    <section id="home">
-      <HeroSection />
-    </section>
 
+    <section id="home">
+      <HeroSection style="background-color: #111111;"/>
+    </section>
     <section id="programs" class="pt-20">
       <Programs />
     </section>
@@ -15,11 +14,10 @@
     <section id="testimonials" class="pt-20">
       <Testimonials />
     </section>
-
     <section id="contact">
       <Contacts />
     </section>
-  </div>
+
 </template>
 
 <script setup>
