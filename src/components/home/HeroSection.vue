@@ -1,7 +1,7 @@
 <template>
   <div class="carousel-container">
-    <section class="position-relative vh-100">
-      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <section class="position-relative">
+      <div id="heroCarousel" class="carousel slide carousel-fade h-100" data-bs-ride="carousel">
         <div class="carousel-inner h-100">
           <div
               v-for="(slide, index) in slides"
@@ -50,15 +50,15 @@
         </button>
       </div>
     </section>
-    <TeamPhoto class="position-relative z-1" />
+  <Overview />
   </div>
 </template>
 
 <script setup>
 import { onMounted } from 'vue'
-import TeamPhoto from "@/components/home/TeamPhoto.vue"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap'
+import Overview from "@/components/home/Overview.vue";
 
 const slides = [
   {
@@ -84,6 +84,13 @@ onMounted(() => {
 </script>
 
 <style scoped>
+/* Carousel base styles */
+.carousel,
+.carousel-inner,
+.carousel-item {
+  min-height: 70vh;
+}
+
 .carousel-item {
   transition: transform 1.2s ease-in-out;
 }
@@ -97,6 +104,7 @@ onMounted(() => {
   text-align: left;
 }
 
+/* Animations */
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -130,6 +138,11 @@ onMounted(() => {
 }
 
 @media (max-width: 768px) {
+  .carousel-item img {
+    min-height: 70vh;
+    object-fit: cover;
+  }
+
   .display-3 {
     font-size: 2.5rem;
   }

@@ -31,7 +31,7 @@
 
       <div class="row">
         <div class="text-lg-center mt-3 mt-lg-0 text-warning">
-          <p class="mb-0">Copyright 2023 © All Right Reserved Design by Rometheme</p>
+          <p class="mb-0">Copyright 2021 © All Rights Reserved by Tenzee MultiSports</p>
         </div>
       </div>
     </div>

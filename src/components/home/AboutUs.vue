@@ -4,24 +4,24 @@
       <div class="background-image"></div>
     </div>
     <div class="content-wrapper">
-      <div class="hero-text">
-        <h1>UNLOCK YOUR FITNESS POTENTIAL</h1>
-        <h1>WITH OUR TEAM</h1>
-      </div>
+      <div class="hero-content">
+        <h1 class="main-title">Welcome to Tenzee Multisports</h1>
+        <p class="tagline">Where fitness meets diversity in a state-of-the-art multisports facility</p>
 
-      <div class="container py-5 px-4">
-        <div class="row g-4">
-          <div
-              v-for="member in teamMembers"
-              :key="member.id"
-              class="col-lg-3 col-md-4 col-sm-6"
-          >
-            <div class="team-member">
-              <img :src="member.image" :alt="member.name" class="team-img">
-              <div class="member-info">
-                <h4>{{ member.name }}</h4>
-                <p>{{ member.position }}</p>
-              </div>
+        <div class="description">
+          <h2 class="subtitle">What is Tenzee Multisports all about?</h2>
+          <div class="features">
+            <div class="feature-item">
+              <h3>Expert Guidance</h3>
+              <p>Benefit from the expertise of our professional trainers, coaches, and physiotherapists</p>
+            </div>
+            <div class="feature-item">
+              <h3>Comprehensive Access</h3>
+              <p>Full access to all facilities including gym, MMA arena, football fields, and climbing walls</p>
+            </div>
+            <div class="feature-item">
+              <h3>State-of-the-Art Facilities</h3>
+              <p>Train with the latest equipment in well-maintained environments</p>
             </div>
           </div>
         </div>
@@ -31,58 +31,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
-const teamMembers = ref([
-  {
-    id: 1,
-    name: 'Gaurav Chinnivar',
-    position: 'Founder',
-    image: '/src/assets/images/BoxingMan-1.jpeg',
-  },
-  {
-    id: 2,
-    name: 'Manoj Kumar',
-    position: 'S&C Head Coach',
-    image: '/src/assets/images/BoxingMan-1.jpeg',
-  },
-  {
-    id: 3,
-    name: 'Francis Xavier',
-    position: 'Football Head Coach',
-    image: '/src/assets/images/BoxingMan-1.jpeg',
-  },
-  {
-    id: 4,
-    name: 'Rehan Khan',
-    position: 'MMA Coach',
-    image: '/src/assets/images/BoxingMan-1.jpeg',
-  },
-  {
-    id: 5,
-    name: 'Kethan P',
-    position: 'Climbing Coach',
-    image: '/src/assets/images/BoxingMan-1.jpeg',
-  },
-  {
-    id: 6,
-    name: 'Valerain Joel',
-    position: 'Football Coach',
-    image: '/src/assets/images/BoxingMan-1.jpeg',
-  },
-  {
-    id: 7,
-    name: 'Madan Rao',
-    position: 'S&C Coach',
-    image: '/src/assets/images/BoxingMan-1.jpeg',
-  },
-  {
-    id: 8,
-    name: 'Rohit Pathak',
-    position: 'Facility Manager',
-    image: '/src/assets/images/BoxingMan-1.jpeg',
-  },
-])
 </script>
 
 <style scoped>
@@ -99,7 +47,6 @@ const teamMembers = ref([
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 .background-image {
@@ -108,84 +55,97 @@ const teamMembers = ref([
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/src/assets/images/WallClimbing-2.jpeg');
+  background-image: url('/src/assets/images/team.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  opacity: 0.3;
+  opacity: 0.4;
   filter: brightness(0.7);
 }
 
 .content-wrapper {
   position: relative;
   z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
-.hero-text {
+.hero-content {
+  max-width: 1000px;
   text-align: center;
-  padding-top: 4rem;
-  margin-bottom: 2rem;
+  color: white;
 }
 
-.hero-text h1 {
-  color: white;
-  font-size: 3.5rem;
+.main-title {
+  font-size: 4rem;
   font-weight: 700;
-  line-height: 1.2;
+  margin-bottom: 1rem;
   text-transform: uppercase;
-  margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.container {
-  position: relative;
+.tagline {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  color: #ffd700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.team-member {
-  position: relative;
-  margin-bottom: 30px;
-  overflow: hidden;
+.subtitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
-.team-member:hover {
+.feature-item:hover {
   transform: translateY(-5px);
 }
 
-.team-img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.team-member:hover .team-img {
-  transform: scale(1.05);
-}
-
-.member-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-  color: white;
-  padding: 20px;
-}
-
-.member-info h4 {
-  margin: 0;
-  font-weight: bold;
+.feature-item h3 {
   color: #ffd700;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
 }
 
-.member-info p {
-  margin: 5px 0 0;
-  font-size: 0.9rem;
+.feature-item p {
+  font-size: 1rem;
+  line-height: 1.5;
   opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

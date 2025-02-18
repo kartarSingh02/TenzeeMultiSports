@@ -40,19 +40,19 @@ const programs = ref([
     title: 'Football',
     description: 'One-on-one coaching for maximum results',
     image: '/src/assets/images/FootballMan-2.jpeg',
-    tags: ['Coaching', 'Strength']
+    tags: ['Football', 'Stamina']
   },
   {
     title: 'Martial Arts',
     description: 'High-energy group workouts for all levels',
     image: '/src/assets/images/BoxingMan-1.jpeg',
-    tags: ['Coaching', 'Strength']
+    tags: ['Strength', 'Training']
   },
   {
     title: 'Wall Climbing',
     description: 'Structured classes for targeted fitness goals',
     image: '/src/assets/images/WallClimbing-3.jpeg',
-    tags: ['Coaching', 'Fitness']
+    tags: ['Climbing', 'Gripping']
   },
   {
     title: 'Strength Training',
