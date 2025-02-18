@@ -3,10 +3,10 @@
     <div class="container px-4">
       <div class="row mb-4">
         <div class="col-lg-6">
-          <img src="/src/assets/images/TenzeeMultiSportsLogo.png" alt="Dyno Fitness & Gym" height="40" class="me-2">
-          <span class="text-warning fs-4">DYNO</span>
+          <img src="/src/assets/images/TenzeeMultiSportsLogo.png" alt="Tenzee Fitness & Gym" height="40" class="me-2">
+          <span class="text-warning fs-4">Tenzee MultiSports</span>
           <span class="text-white-50" style="margin-left: 10px">Fitness & Gym</span>
-          <p class="mt-3">PLEASE FEEL FREE TO SEND US AN E-MAIL AT HELLO@AWESOMESITE.COM FOR ANY ADDITIONAL INQUIRIES</p>
+          <p class="mt-3">Please feel free to send us an email at <span class="text-warning fs-7">test@gmail.com</span> for any additional inquiries</p>
         </div>
         <div class="col-lg-6 text-lg-end">
           <div class="social-icons mb-3">
@@ -23,7 +23,8 @@
               <i class="fab fa-facebook"></i>
             </a>
           </div>
-          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+          <p class="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+          <p>+91 7483567450 </p>
         </div>
       </div>
 

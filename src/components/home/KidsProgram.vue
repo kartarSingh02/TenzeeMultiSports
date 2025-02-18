@@ -16,7 +16,7 @@
               <div class="position-absolute top-0 start-0 p-3 d-flex gap-2">
               <span v-for="(tag, tagIndex) in program.tags"
                     :key="tagIndex"
-                    class="badge bg-dark text-uppercase">
+                    class="badge text-bg-warning text-uppercase">
                 {{ tag }}
               </span>
               </div>
@@ -27,6 +27,12 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="https://fc.one/Tenzee-multisports" target="_blank" rel="noopener noreferrer"
+           class="btn btn-outline-warning rounded-pill px-5 py-2 fw-medium fs-6">
+          Book Now
+        </a>
       </div>
     </div>
   </div>
