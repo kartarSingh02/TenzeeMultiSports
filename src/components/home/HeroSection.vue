@@ -8,7 +8,7 @@
               :key="slide.id"
               class="carousel-item h-100"
               :class="{ active: index === 0 }"
-              :data-bs-interval="5000"
+              :data-bs-interval="3000"
           >
             <img
                 :src="slide.image"
