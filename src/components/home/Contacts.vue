@@ -6,7 +6,7 @@
           <img src="/src/assets/images/TenzeeMultiSportsLogo.png" alt="Tenzee Fitness & Gym" height="40" class="me-2">
           <span class="text-warning fs-4">Tenzee MultiSports</span>
           <span class="text-white-50" style="margin-left: 10px">Fitness & Gym</span>
-          <p class="mt-3">Please feel free to send us an email at <span class="text-warning fs-7">test@gmail.com</span> for any additional inquiries</p>
+          <p class="mt-3">Please feel free to send us an email at <span class="text-warning fs-7">tenzeemultisports@gmail.com</span> for any additional inquiries</p>
         </div>
         <div class="col-lg-6 text-lg-end">
           <div class="social-icons mb-3">
@@ -31,7 +31,6 @@
               <i class="fab fa-whatsapp"></i>
             </a>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
         </div>
       </div>
 
