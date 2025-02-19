@@ -22,9 +22,16 @@
             <a href="#" class="social-icon">
               <i class="fab fa-facebook"></i>
             </a>
+            <a
+                :href="whatsappLink"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
           </div>
-          <p class="mb-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-          <p>+91 7483567450 </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
         </div>
       </div>
 
@@ -40,6 +47,10 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+
+const phoneNumber = '917483567450'
+const whatsappLink = computed(() => `https://wa.me/${phoneNumber}`)
 </script>
 
 <style scoped>
@@ -70,6 +81,12 @@
   background-color: #ffc107;
   border-color: #ffc107;
   color: #000;
+}
+
+.whatsapp-icon:hover {
+  background-color: #25D366;
+  border-color: #25D366;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
