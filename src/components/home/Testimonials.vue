@@ -225,7 +225,7 @@ onMounted(() => {
 
 .testimonial-card {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(2px);
   border-radius: 15px;
   padding: 30px;
   height: 100%;

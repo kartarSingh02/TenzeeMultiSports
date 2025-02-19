@@ -78,13 +78,15 @@ const programs = ref([
   transform: translateY(-5px);
 }
 
-.card img {
-  filter: grayscale(100%);
-  transition: filter 0.3s ease-in-out;
-}
+@media (min-width: 768px) {
+  .card img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+  }
 
-.card:hover img {
-  filter: grayscale(0%);
+  .card:hover img {
+    filter: grayscale(0%);
+  }
 }
 
 .badge {

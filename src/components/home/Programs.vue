@@ -53,7 +53,7 @@
 
         <a href="https://fc.one/Tenzee-multisports" target="_blank" rel="noopener noreferrer"
            class="btn btn-outline-warning rounded-pill px-4 py-2">
-          Book Now <i class="bi bi-arrow-right ms-2"></i>
+          Book Now
         </a>
       </div>
 
@@ -64,11 +64,11 @@
               <div class="row g-0">
                 <div class="col-md-6">
                   <img src="/src/assets/images/WallClimbing-1.jpeg" alt="Weight Loss Training"
-                       class="img-fluid h-100 object-fit-cover" />
+                       class="img-fluid h-100 object-fit-cover rounded-start" />
                 </div>
                 <div class="col-md-6">
                   <img src="/src/assets/images/BoxingRing.jpeg" alt="Weight Loss Training"
-                       class="img-fluid h-100 object-fit-cover" />
+                       class="img-fluid h-100 object-fit-cover rounded-end" />
                 </div>
               </div>
             </div>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="col-md-6">
                   <img src="/src/assets/images/BoxingWoman.jpeg" alt="Training Plan"
-                       class="img-fluid h-100 object-fit-cover" />
+                       class="img-fluid h-100 object-fit-cover rounded-end" />
                 </div>
               </div>
             </div>
@@ -136,6 +136,16 @@ onMounted(() => {
   height: 8px;
   background-color: #ffc107;
   border-radius: 50%;
+}
+
+.rounded-start {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.rounded-end {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .animate-card {
