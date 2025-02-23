@@ -1,13 +1,18 @@
-<!-- src/App.vue -->
 <template>
   <div id="app">
     <navbar/>
     <router-view />
+    <whatsapp-button
+        phone-number="+917483567450"
+        message="Need help? Chat with us!"
+        pre-filled-message="Hi! I'm interested in learning more about your services."
+    />
   </div>
 </template>
 
 <script setup>
 import Navbar from "@/components/home/Navbar.vue";
+import WhatsappButton from "@/components/home/WhatsappButton.vue";
 </script>
 
 <style>
@@ -23,6 +28,10 @@ import Navbar from "@/components/home/Navbar.vue";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+#section{
+  max-height: 100vh;
 }
 
 html, body {

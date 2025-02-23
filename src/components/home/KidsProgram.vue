@@ -62,7 +62,7 @@ const programs = ref([
   },
   {
     title: 'Strength Training',
-    description: 'Build strength and muscle with expert guidance',
+    description: 'Build strength and muscle with guidance',
     image: '/src/assets/images/GymView-2.jpeg',
     tags: ['Coaching', 'Strength']
   }

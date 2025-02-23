@@ -8,30 +8,30 @@
           <span class="text-white-50" style="margin-left: 10px">Fitness & Gym</span>
           <p class="mt-3">Please feel free to send us an email at <span class="text-warning fs-7">tenzeemultisports@gmail.com</span> for any additional inquiries</p>
         </div>
-        <div class="col-lg-6 text-lg-end">
-          <div class="social-icons mb-3">
-            <a href="#" class="social-icon">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-icon">
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a
-                :href="whatsappLink"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-icon"
-            >
-              <i class="fab fa-whatsapp"></i>
-            </a>
-          </div>
-        </div>
+<!--        <div class="col-lg-6 text-lg-end">-->
+<!--          <div class="social-icons mb-3">-->
+<!--            <a href="#" class="social-icon">-->
+<!--              <i class="fab fa-instagram"></i>-->
+<!--            </a>-->
+<!--            <a href="#" class="social-icon">-->
+<!--              <i class="fab fa-youtube"></i>-->
+<!--            </a>-->
+<!--            <a href="#" class="social-icon">-->
+<!--              <i class="fab fa-twitter"></i>-->
+<!--            </a>-->
+<!--            <a href="#" class="social-icon">-->
+<!--              <i class="fab fa-facebook"></i>-->
+<!--            </a>-->
+<!--            <a-->
+<!--                :href="whatsappLink"-->
+<!--                target="_blank"-->
+<!--                rel="noopener noreferrer"-->
+<!--                class="social-icon"-->
+<!--            >-->
+<!--              <i class="fab fa-whatsapp"></i>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
 
       <hr class="border-secondary">

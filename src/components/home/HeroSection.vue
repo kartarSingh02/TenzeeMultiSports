@@ -73,7 +73,7 @@ const slides = [
   },
   {
     id: 3,
-    image: '/src/assets/images/hero-3.jpeg',
+    image: '/src/assets/images/WallClimbing-2.jpeg',
     alt: 'Fitness Training 3',
   }
 ]

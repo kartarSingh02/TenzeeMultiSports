@@ -63,12 +63,16 @@
             <div class="card bg-dark text-white border-0 animate-card animate-from-top">
               <div class="row g-0">
                 <div class="col-md-6">
-                  <img src="/src/assets/images/WallClimbing-1.jpeg" alt="Weight Loss Training"
-                       class="img-fluid h-100 object-fit-cover rounded-start" />
+                  <div class="image-container">
+                    <img src="/src/assets/images/WallClimbing-1.jpeg" alt="Weight Loss Training"
+                         class="img-fluid rounded-start" />
+                  </div>
                 </div>
                 <div class="col-md-6">
-                  <img src="/src/assets/images/BoxingRing.jpeg" alt="Weight Loss Training"
-                       class="img-fluid h-100 object-fit-cover rounded-end" />
+                  <div class="image-container">
+                    <img src="/src/assets/images/BoxingRing.jpeg" alt="Weight Loss Training"
+                         class="img-fluid rounded-end" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -94,8 +98,10 @@
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <img src="/src/assets/images/BoxingWoman.jpeg" alt="Training Plan"
-                       class="img-fluid h-100 object-fit-cover rounded-end" />
+                  <div class="image-container">
+                    <img src="/src/assets/images/BoxingWoman.jpeg" alt="Training Plan"
+                         class="img-fluid rounded-end" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -164,5 +170,44 @@ onMounted(() => {
 .animate-card.show {
   visibility: visible;
   transform: translateY(0);
+}
+
+/* Added responsive image handling */
+.image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .image-container {
+    height: 250px; /* Reduced height for mobile */
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 576px) {
+  .image-container {
+    height: 250px; /* Even smaller height for very small screens */
+  }
 }
 </style>

@@ -44,7 +44,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/src/assets/images/WallClimbing-2.jpeg');
+  background-image: url('/src/assets/images/Hero-3.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -84,5 +84,39 @@
   margin-top: 2rem;
   line-height: 1.6;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Media queries for responsive text */
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* Additional adjustments for very small screens */
+@media screen and (max-width: 320px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+  }
 }
 </style>
